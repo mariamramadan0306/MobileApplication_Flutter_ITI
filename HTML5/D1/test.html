@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <video src="frozen.mp4" width="900" id="v1"></video>
+    <br />
+    <progress id="p1" max="100" value="20" style="width: 900px"></progress>
+    <time datetime="00:00"
+      ><span id="curr">00:00</span>/<span id="dur">00:00</span></time
+    >
+    <br />
+    <button id="play">Play</button>
+    <button id="stop">stop</button>
+    <button id="-10"><<</button>
+    <button id="-5"><</button>
+    <button id="+5">></button>
+    <button id="+10">>></button>
+    <input type="range" id="sound-range" step="0.01" min="0" max="1" />
+    <button id="mute">Mute</button>
+    <br />
+    <label>Speed</label>
+    <input
+      type="range"
+      id="speed-range"
+      step="0.25"
+      min="0"
+      max="2"
+      value="1"
+    />
+
+    <script>
+      const prog = document.getElementById("p1");
+      const video = document.getElementById("v1");
+      const soundSlider = document.getElementById("sound-range");
+      const speedSlider = document.getElementById("speed-range");
+
+      var dur;
+
+      function formatTime(seconds) {
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+
+        return `${mins}:${secs.toString().padStart(2, "0")}`;
+      }
+
+      video.addEventListener("loadedmetadata", () => {
+        dur = Math.floor(video.duration);
+        prog.max = dur;
+        video.playbackRate = 1;
+        document.getElementById("dur").textContent = formatTime(dur);
+      });
+
+      video.addEventListener("timeupdate", () => {
+        prog.value = Math.floor(video.currentTime);
+        document.getElementById("curr").textContent = formatTime(prog.value);
+      });
+
+      document.getElementById("play").onclick = function () {
+        video.play();
+      };
+
+      document.getElementById("stop").onclick = function () {
+        video.pause();
+      };
+
+      document.getElementById("-10").onclick = function () {
+        video.currentTime -= 10;
+      };
+      document.getElementById("-5").onclick = function () {
+        video.currentTime -= 5;
+      };
+      document.getElementById("+10").onclick = function () {
+        video.currentTime += 10;
+      };
+      document.getElementById("+5").onclick = function () {
+        video.currentTime += 5;
+      };
+
+      soundSlider.addEventListener("input", () => {
+        video.volume = soundSlider.value;
+      });
+
+      document.getElementById("mute").onclick = function () {
+        video.muted = !video.muted;
+      };
+
+      speedSlider.addEventListener("input", () => {
+        video.playbackRate = speedSlider.value;
+      });
+    </script>
+  </body>
+</html>

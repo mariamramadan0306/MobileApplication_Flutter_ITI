@@ -1,0 +1,18 @@
+name: demo
+description: A sample command-line application.
+#Major: main version (breaking changes)
+#Minor: add new features (combatiple with old code)
+#Patch: fixing bugs
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.11.1
+
+# Add regular dependencies here.
+dependencies:
+  path: ^1.9.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6

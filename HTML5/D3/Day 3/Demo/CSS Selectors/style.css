@@ -1,0 +1,122 @@
+/* 1-Basic Selectors (id-class-tag)
+    2- Attribute Selector
+    3-Combinator Selector
+    4-Pseudo classes
+    5-Pseudo elements
+*/
+
+/* Combinator Selectors
+1-General Sibling (~)
+2-Adjacent Sibling (+)
+3-Direct Child (>)
+4-General Child (space) */
+
+/* p {
+  color: green;
+} */
+
+/* Pseudo Classes
+1-Dynamic Classes
+2- Link Pseudo Classes
+3- UI Elements
+4- Structural
+*/
+
+/* 1-Dynamic Classes
+hover - active - focus
+*/
+
+/* 2- Link Pseudo Classes
+link - target - visited
+*/
+
+/* 3- UI Elements
+enabled - disabled - valid - invalid
+*/
+
+/* 4- Structural
+first-child , last-child , nth-child
+*/
+
+/* Pseudo Elements
+(first-letter , first-line , before , after ,selection)
+*/
+
+/* li:first-child {
+  color: blue;
+}
+
+li:last-child {
+  color: red;
+} */
+/* * {
+  font-size: 50px;
+} */
+
+#h1id {
+  color: blue;
+}
+
+h1 {
+  color: red;
+}
+
+p::selection {
+  color: white;
+}
+.myp1::first-letter {
+  color: red;
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+p.myp1::first-line {
+  color: green;
+}
+
+li:nth-child(2n) {
+  color: green;
+}
+
+li:nth-child(2n + 1) {
+  color: orange;
+}
+
+a:visited {
+  color: red;
+}
+a:link {
+  color: green;
+}
+
+p:target {
+  background-color: yellow;
+}
+
+h1 {
+  text-align: center;
+}
+h1:active {
+  background-color: aqua;
+  color: red;
+}
+h1:hover {
+  background-color: black;
+  color: white;
+}
+
+input:valid + p {
+  display: none;
+}
+
+input:invalid + p {
+  display: block;
+}
+
+input:disabled {
+  cursor: not-allowed;
+}
+
+input:invalid {
+  border: 1px solid red;
+}

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes myAnim {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 500px;
+        }
+      }
+
+      @keyframes newAnim {
+        0% {
+          background-color: red;
+          left: 0px;
+          top: 0px;
+        }
+
+        25% {
+          background-color: orange;
+          left: 200px;
+          top: 0px;
+        }
+
+        50% {
+          background-color: yellow;
+          left: 200px;
+          top: 200px;
+        }
+
+        75% {
+          background-color: brown;
+          left: 0px;
+          top: 200px;
+        }
+
+        100% {
+          background-color: red;
+          top: 0px;
+          left: 0px;
+        }
+      }
+
+      /* @rule
+        @keyframes  => animation
+        @font-face  => to change font
+        @media      => responsive
+        @import     => to import css files
+        @viewport   => deprecated xxxxxxxxxxxx
+        */
+      /* div {
+        border: 2px solid red;
+        width: 200px;
+        height: 400px;
+        overflow: scroll;
+      } */
+
+      /* div {
+        border: 2px solid red;
+      }
+
+      span {
+        border: 1px solid blue;
+        width: 100px;
+        height: 200px;
+        display: inline-block;
+        margin: 10px;
+      } */
+
+      div {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 110px;
+        animation-name: myAnim;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-delay: 3s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in;
+        /* animation: myAnim 4s ease-in 3s infinite alternate; */
+      }
+
+      img:hover {
+        opacity: 0;
+      }
+
+      img {
+        /* transition-property: ;
+        transition: ; */
+        transition: opacity 2s;
+      }
+
+      div {
+        background-color: aquamarine;
+        width: 200px;
+        height: 300px;
+        overflow: hidden;
+        border: 2px solid green;
+        transition: all 3s;
+      }
+
+      div:hover {
+        background-color: green;
+        width: 500px;
+        height: 600px;
+        overflow: hidden;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, ducimus
+      corporis! Suscipit officia nesciunt, alias mollitia impedit, deserunt hic
+      vitae aliquam fugiat error nam, eius soluta molestiae commodi amet
+      voluptatem! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Iste, ducimus corporis! Suscipit officia nesciunt, alias mollitia impedit,
+      deserunt hic vitae aliquam fugiat error nam, eius soluta molestiae commodi
+      amet voluptatem! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Iste, ducimus corporis! Suscipit officia nesciunt, alias mollitia impedit,
+      deserunt hic vitae aliquam fugiat error nam, eius soluta molestiae commodi
+      amet voluptatem! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Iste, ducimus corporis! Suscipit officia nesciunt, alias mollitia impedit,
+      deserunt hic vitae aliquam fugiat error nam, eius soluta molestiae commodi
+      amet voluptatem! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Iste, ducimus corporis! Suscipit officia nesciunt, alias mollitia impedit,
+      deserunt hic vitae aliquam fugiat error nam, eius soluta molestiae commodi
+      amet voluptatem! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Iste, ducimus corporis! Suscipit officia nesciunt, alias mollitia impedit,
+      deserunt hic vitae aliquam fugiat error nam, eius soluta molestiae commodi
+      amet voluptatem!
+    </div> -->
+    <!-- 
+    <div>
+      Lorem ipsum dolor sit amet <span>Test Span</span> sconsectetur adipisicing
+      elit. Officiis excepturi aliquam dolorem harum quas. Et, dolorem minus,
+      reprehenderit officia nesciunt vitae dolorum odit suscipit praesentium
+      iste harum, unde porro at. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Officiis excepturi aliquam dolorem harum quas. Et,
+      dolorem minus, reprehenderit officia nesciunt vitae dolorum odit suscipit
+      praesentium iste harum, unde porro at. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Officiis excepturi aliquam dolorem harum
+      quas. Et, dolorem minus, reprehenderit officia nesciunt vitae dolorum odit
+      suscipit praesentium iste harum, unde porro at.
+    </div> -->
+
+    <div></div>
+
+    <img src="img.jpg" alt="" />
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quo. Qui
+      magni alias, quo facilis molestiae pariatur cum esse laudantium maiores
+      nam voluptates ullam, in consequuntur dolores laboriosam quam. Atque.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Vel, quo. Qui magni
+      alias, quo facilis molestiae pariatur cum esse laudantium maiores nam
+      voluptates ullam, in consequuntur dolores laboriosam quam. Atque.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Vel, quo. Qui magni
+      alias, quo facilis molestiae pariatur cum esse laudantium maiores nam
+      voluptates ullam, in consequuntur dolores laboriosam quam. Atque.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Vel, quo. Qui magni
+      alias, quo facilis molestiae pariatur cum esse laudantium maiores nam
+      voluptates ullam, in consequuntur dolores laboriosam quam. Atque.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Vel, quo. Qui magni
+      alias, quo facilis molestiae pariatur cum esse laudantium maiores nam
+      voluptates ullam, in consequuntur dolores laboriosam quam. Atque.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Vel, quo. Qui magni
+      alias, quo facilis molestiae pariatur cum esse laudantium maiores nam
+      voluptates ullam, in consequuntur dolores laboriosam quam. Atque.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Vel, quo. Qui magni
+      alias, quo facilis molestiae pariatur cum esse laudantium maiores nam
+      voluptates ullam, in consequuntur dolores laboriosam quam. Atque.
+    </div>
+  </body>
+</html>

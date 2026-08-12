@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- External Stylesheet-->
+    <style>
+      #p1 {
+        color: aqua;
+      }
+
+      p {
+        color: blue;
+      }
+
+      input[type="text"]:focus {
+        background-color: red;
+      }
+
+      /* Specificity
+      1-Inline Style  xxxxxxx
+      2-ID
+      3-Classes,attributes,pseudo classes
+      4-tags,pseudo elements
+      */
+
+      /* div ~ p {
+        color: blue;
+      }
+
+      div p {
+        color: red;
+      } */
+
+      summary::after {
+        content: "\00bb";
+      }
+      summary {
+        list-style: none;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Internal Stylesheet-->
+  </head>
+  <body>
+    <details>
+      <summary>HTML</summary>
+      <p>TESTSTSTSTTSE</p>
+    </details>
+    <form action="">
+      <input type="text" required pattern="[a-z]{3}" />
+      <p>invalid format</p>
+      <input type="button" value="ok" disabled />
+      <input type="text" disabled />
+      <input type="submit" />
+    </form>
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+
+    <ul>
+      <li>22</li>
+      <li>33</li>
+      <li>44</li>
+    </ul>
+    <p class="myp1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cum
+      modi. Autem consequatur tenetur, illum molestias quisquam laboriosam non
+      numquam eveniet cum voluptas deserunt possimus, officiis perspiciatis illo
+      eos cumque.
+    </p>
+    <!-- <p style="color: red; background-color: green">test</p> -->
+    <!-- Inline Style-->
+    <h1 id="h1id" style="color: green">Welcome</h1>
+    <input type="text" />
+    <input type="email" />
+
+    <p id="p1">Test</p>
+    <div>
+      <p>test 1</p>
+      <span>test span</span>
+      <section>
+        <p>test 2</p>
+      </section>
+      <p>test para 2</p>
+    </div>
+    <p>paragraph 1</p>
+    <p>paragraph 2</p>
+    <span>span 1</span>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="#p1">Go to Top</a>
+    <a href="http://www.google.com">Go to Google</a>
+  </body>
+</html>

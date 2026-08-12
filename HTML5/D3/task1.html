@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task1</title>
+    <style>
+      svg {
+        width: 500px;
+        height: 500px;
+        background-color: beige;
+      }
+
+      #line {
+        animation: anim 5s ease-in 0s 1;
+      }
+      @keyframes anim {
+        from {
+          transform: translate3d(-500px, -500px, 0);
+        }
+
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg>
+      <polygon
+        id="line"
+        stroke="red"
+        stroke-width="10"
+        points="0,0 500,500"
+        style="position: relative"
+      ></polygon>
+    </svg>
+    <script>
+      setTimeout(function () {
+        alert("animation end");
+      }, 5000);
+    </script>
+  </body>
+</html>

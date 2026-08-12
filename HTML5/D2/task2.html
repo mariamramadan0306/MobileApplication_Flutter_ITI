@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        margin-bottom: 20px;
+      }
+      button {
+        margin-top: 60px;
+        margin-left: 150px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <label>Enter your name:</label>
+    <input type="text" width="100" id="name" />
+    <br />
+    <label style="margin-right: 12px">Enter your age:</label>
+    <input type="text" width="100" id="age" />
+    <br />
+    <label>Select your Gender:</label>
+    <br />
+    <img src="../D2/Day2/Task/WebStorage/1.jpg" />
+    <input id="male" type="radio" name="gen" value="boy" />
+    <img src="../D2/Day2/Task/WebStorage/2.jpg" />
+    <input id="female" type="radio" name="gen" value="girl" />
+    <br />
+    <label>Select your favorite color:</label>
+    <select id="color">
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="biue">Blue</option>
+    </select>
+    <br />
+    <button id="reg">register</button>
+    <script>
+      const name = document.getElementById("name");
+      const age = document.getElementById("age");
+      const color = document.getElementById("color");
+
+      document.getElementById("reg").onclick = function () {
+        const gen = document.querySelector('input[name="gen"]:checked');
+        localStorage.setItem("name", name.value);
+        localStorage.setItem("age", age.value);
+        localStorage.setItem("color", color.value);
+        localStorage.setItem("gen", gen.value);
+
+        location.assign("page2.html");
+      };
+    </script>
+  </body>
+</html>

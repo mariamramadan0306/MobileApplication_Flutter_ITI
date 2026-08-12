@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relative;
+      }
+
+      .container p {
+        position: absolute;
+        top: 50%;
+        left: 27%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img id="genPhoto" />
+      <p>
+        Wellcome <span id="name"></span> you have visited the site
+        <span id="visitTimes"></span> times :)
+      </p>
+    </div>
+    <script>
+      let visits = localStorage.getItem("visits");
+      if (visits === null) {
+        visits = 1;
+      } else {
+        visits = Number(visits) + 1;
+      }
+
+      localStorage.setItem("visits", visits);
+
+      if (localStorage.getItem("gen") == "boy")
+        document.getElementById("genPhoto").src =
+          "../D2/Day2/Task/WebStorage/1.jpg";
+      else
+        document.getElementById("genPhoto").src =
+          "../D2/Day2/Task/WebStorage/2.jpg";
+      document.getElementById("name").textContent = localStorage.name;
+      document.getElementById("name").style.color = localStorage.color;
+      document.getElementById("visitTimes").textContent = localStorage.visits;
+      document.getElementById("visitTimes").style.color = localStorage.color;
+    </script>
+  </body>
+</html>
